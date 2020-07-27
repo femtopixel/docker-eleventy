@@ -1,0 +1,4 @@
+.build
+site
+manifest.yaml
+.Dockerfile
