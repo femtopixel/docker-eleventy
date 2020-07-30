@@ -1,6 +1,6 @@
 FROM node:alpine
 
-ARG VERSION=0.1.0
+ARG VERSION=v0.11.0
 LABEL maintainer="Jay MOULIN <https://jaymoulin.me/femtopixel/docker-eleventy> <https://twitter.com/MoulinJay>"
 LABEL version="${VERSION}"
 
