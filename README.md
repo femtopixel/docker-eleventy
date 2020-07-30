@@ -17,12 +17,19 @@ THIS REPOSITORY IS AUTO-UPDATED BY [GITHUB-RELEASE-NOTIFIER](https://github.com/
 Description
 -----------
 
-The purpose of this image is to use eleventy (static site builder) easily thanks to Docker. 
+The purpose of this image is to use [eleventy (static site builder)](https://github.com/11ty/eleventy) easily thanks to Docker. 
 
 Docker Usage
 ------------
 
+Dev :
+
 ```
-docker run --rm -v /path/to/your/site:/app --name eleventy -p 8080:8080 femtopixel/eleventy [--serve]
+docker run --rm -v /path/to/your/site:/app --name eleventy -p 8080:8080 femtopixel/eleventy --serve
+```
+Production :
+
+```
+docker run --rm -v /path/to/your/site:/app --name eleventy femtopixel/eleventy --output=/app/_site/
 ```
 

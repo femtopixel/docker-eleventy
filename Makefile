@@ -1,4 +1,4 @@
-VERSION ?= 1.0.6
+VERSION ?= v0.11.0
 FULLVERSION ?= ${VERSION}
 CACHE ?= --no-cache=1
 .PHONY: all build publish latest
