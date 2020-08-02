@@ -10,8 +10,8 @@ qemu-aarch64-static:
 	cp /usr/bin/qemu-aarch64-static .
 build: qemu-aarch64-static qemu-arm-static
 	$(foreach arch,$(archs), \
-		cat Dockerfile | sed "s/FROM npm/FROM ${arch}\/npm/g" > .Dockerfile; \
-		docker build -t femtopixel/eleventy:${VERSION}-$(arch) --build-arg VERSION=${VERSION} ${CACHE} -f .Dockerfile .;\
+		cat Dockerfile | sed "s/FROM node/FROM ${arch}\/node/g" > .Dockerfile; \
+		docker build -t femtopixel/eleventy:${VERSION}-$(arch) --build-arg VERSION=${VERSION}-$(arch) ${CACHE} -f .Dockerfile .;\
 	)
 publish:
 	docker push femtopixel/eleventy
