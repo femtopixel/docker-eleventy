@@ -1,5 +1,5 @@
-VERSION ?= v1.0.0-canary.9
-FULLVERSION ?= v1.0.0-canary.9
+VERSION ?= v1.0.0-canary.10
+FULLVERSION ?= v1.0.0-canary.10
 CACHE ?= --no-cache=1
 .PHONY: all build publish latest
 archs ?= amd64 arm32v6 arm64v8 i386
