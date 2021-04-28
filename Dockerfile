@@ -4,7 +4,7 @@ COPY qemu-*-static /usr/bin/
 
 FROM builder
 
-ARG VERSION=v1.0.0-canary.15
+ARG VERSION=v1.0.0-canary.16
 LABEL maintainer="Jay MOULIN <https://jaymoulin.me/femtopixel/docker-eleventy> <https://twitter.com/MoulinJay>"
 LABEL version="${VERSION}"
 
