@@ -13,7 +13,3 @@ manifests:
     platform:
       architecture: amd64
       os: linux
-  - image: femtopixel/eleventy:$VERSION-i386
-    platform:
-      architecture: 386
-      os: linux

@@ -2,7 +2,7 @@ VERSION ?= v1.0.1-canary.3
 FULLVERSION ?= v1.0.1-canary.3
 CACHE ?= --no-cache=1
 .PHONY: all build publish latest
-archs ?= amd64 arm32v6 arm64v8 i386
+archs ?= amd64 arm32v6 arm64v8
 all: build publish latest
 qemu-arm-static:
 	cp /usr/bin/qemu-arm-static .
