@@ -4,10 +4,10 @@ COPY qemu-*-static /usr/bin/
 
 FROM builder
 
-ARG VERSION=v2.0.0-canary.14
+ARG VERSION=2.0.0-canary.14
 LABEL maintainer="Jay MOULIN <https://jaymoulin.me/femtopixel/docker-eleventy> <https://twitter.com/MoulinJay>"
-LABEL version="${VERSION}"
+LABEL version="v${VERSION}"
 
-RUN npm add -g npm @11ty/eleventy
+RUN npm add -g npm @11ty/eleventy@${VERSION}
 WORKDIR /app
 ENTRYPOINT ["eleventy"]
