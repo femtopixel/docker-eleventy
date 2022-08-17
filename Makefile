@@ -1,4 +1,4 @@
-VERSION ?= v2.0.0-canary.14
+VERSION ?= 2.0.0-canary.14
 FULLVERSION ?= v2.0.0-canary.14
 CACHE ?= --no-cache=1
 .PHONY: all build publish latest
@@ -11,11 +11,11 @@ qemu-aarch64-static:
 build: qemu-aarch64-static qemu-arm-static
 	$(foreach arch,$(archs), \
 		cat Dockerfile | sed "s/FROM node/FROM ${arch}\/node/g" > .Dockerfile; \
-		docker build -t femtopixel/eleventy:${VERSION}-$(arch) --build-arg VERSION=${VERSION}-$(arch) ${CACHE} -f .Dockerfile .;\
+		docker build -t femtopixel/eleventy:v${VERSION}-$(arch) --build-arg VERSION=${VERSION}-$(arch) ${CACHE} -f .Dockerfile .;\
 	)
 publish:
 	docker push femtopixel/eleventy -a
-	cat manifest.yml | sed "s/\$$VERSION/${VERSION}/g" > manifest.yaml
+	cat manifest.yml | sed "s/\$$VERSION/v${VERSION}/g" > manifest.yaml
 	cat manifest.yaml | sed "s/\$$FULLVERSION/${FULLVERSION}/g" > manifest2.yaml
 	mv manifest2.yaml manifest.yaml
 	manifest-tool push from-spec manifest.yaml
