@@ -1,4 +1,4 @@
-FROM node:alpine as builder
+FROM node:alpine3.17 as builder
 
 COPY qemu-*-static /usr/bin/
 
