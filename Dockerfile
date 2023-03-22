@@ -4,7 +4,7 @@ COPY qemu-*-static /usr/bin/
 
 FROM builder
 
-ARG VERSION=v2.0.1-alpha.2
+ARG VERSION=v2.0.1-alpha.3
 LABEL maintainer="Jay MOULIN <https://jaymoulin.me/femtopixel/docker-eleventy> <https://twitter.com/MoulinJay>"
 LABEL version="${VERSION}"
 
