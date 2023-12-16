@@ -1,5 +1,5 @@
-VERSION ?= v2.0.2-alpha.2
-FULLVERSION ?= v2.0.2-alpha.2
+VERSION ?= v3.0.0-alpha.1
+FULLVERSION ?= v3.0.0-alpha.1
 CACHE ?= --no-cache=1
 .PHONY: all build publish latest
 archs ?= amd64 arm32v6 arm64v8
