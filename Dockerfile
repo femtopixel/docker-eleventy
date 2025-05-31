@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-ARG VERSION=v3.1.1-beta.1
+ARG VERSION=v3.1.1-beta.2
 ARG TARGETPLATFORM
 LABEL maintainer="Jay MOULIN <https://jaymoulin.me/femtopixel/docker-eleventy>"
 LABEL version="${VERSION}-${TARGETPLATFORM}"
